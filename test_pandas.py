@@ -1,4 +1,5 @@
 import pandas as pd
-values = pd.array([1,2,3,4,5,6,7])
-print(pd.Series(values))
-print(pd.DataFrame(values))
+df = pd.read_csv("sample_table.csv")
+df["Salary"] = [1000,1000,1234,1234,4120]
+print(df.drop("Salary", axis=1))
+print(df)
